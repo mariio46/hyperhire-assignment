@@ -14,19 +14,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Button } from './button';
 import { HyperhireWhiteLogo } from './hyperhire-logo';
-import { TablerIcon } from './tabler-icon';
 import { Separator } from './ui/separator';
-
-const MobileNavbar = () => {
-    return (
-        <nav className="mb-9 block px-2.5 py-5 lg:hidden">
-            <div className="flex items-center justify-between">
-                <HyperhireWhiteLogo />
-                <TablerIcon name="IconMenu2" className="stroke-white" />
-            </div>
-        </nav>
-    );
-};
 
 const Navbar = () => {
     return (
@@ -87,4 +75,4 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWit
 );
 ListItem.displayName = 'ListItem';
 
-export { MobileNavbar, Navbar };
+export { Navbar };
