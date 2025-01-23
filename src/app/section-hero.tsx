@@ -1,9 +1,6 @@
-'use client';
-
-import { motion } from 'framer-motion';
-
 import { Container } from '@/components/container';
 import { HeroCard } from '@/components/hero-card';
+import { MotionDiv } from '@/components/motion';
 import { MobileNavbar, Navbar } from '@/components/navbar';
 import { OfferBlock, OfferBlockDescription, OfferBlockTitle } from '@/components/offer-block';
 import { PartnertshipCarousel } from '@/components/partnertship-carousel';
@@ -19,7 +16,7 @@ const SectionHero = () => {
                 <section id="hero" className="grid gap-9 px-2.5 lg:grid-cols-2 lg:gap-4">
                     <div id="hero-left-side" className="space-y-16">
                         <div className="space-y-4">
-                            <motion.div
+                            <MotionDiv
                                 initial={{ opacity: 0, scale: 1 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
@@ -27,16 +24,16 @@ const SectionHero = () => {
                                 <SpeechBubble variant="default" arrowPosition="left">
                                     <span>풀타임, 파트타임</span>
                                 </SpeechBubble>
-                            </motion.div>
-                            <motion.div
+                            </MotionDiv>
+                            <MotionDiv
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease: 'easeOut' }}>
                                 <h1 className="text-4xl/[46.8px] font-black tracking-normal text-zinc-100 lg:text-5xl/[62.4px]">
                                     최고의 실력을 가진 <span className="block">외국인 인재를 찾고 계신가요?</span>
                                 </h1>
-                            </motion.div>
-                            <motion.div
+                            </MotionDiv>
+                            <MotionDiv
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease: 'easeOut' }}>
@@ -44,9 +41,9 @@ const SectionHero = () => {
                                     법률 및 인사관리 부담없이{' '}
                                     <span className="lg:block">1주일 이내에 원격으로 채용해보세요.</span>
                                 </p>
-                            </motion.div>
+                            </MotionDiv>
                         </div>
-                        <motion.div
+                        <MotionDiv
                             initial={{ opacity: 0, scale: 1 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
@@ -71,28 +68,38 @@ const SectionHero = () => {
                                     </OfferBlockDescription>
                                 </OfferBlock>
                             </div>
-                        </motion.div>
+                        </MotionDiv>
                     </div>
                     <div id="hero-right-side" className="flex flex-col items-center space-y-4">
-                        <SpeechBubble variant="primary" arrowPosition="middle">
-                            <div className="me-1 flex size-7 items-center justify-center rounded-full bg-[#BBF3D2]">
-                                <TablerIcon name="IconCurrencyDollar" className="stroke-[#00C696] stroke-2" />
-                            </div>
-                            <span>월 100만원</span>
-                        </SpeechBubble>
-                        <div>
+                        <MotionDiv
+                            initial={{ opacity: 0, scale: 1 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}>
+                            <SpeechBubble variant="primary" arrowPosition="middle">
+                                <div className="me-1 flex size-7 items-center justify-center rounded-full bg-[#BBF3D2]">
+                                    <TablerIcon name="IconCurrencyDollar" className="stroke-[#00C696] stroke-2" />
+                                </div>
+                                <span>월 100만원</span>
+                            </SpeechBubble>
+                        </MotionDiv>
+                        <MotionDiv
+                            initial={{ opacity: 0, scale: 1 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}>
                             <HeroCard />
-                        </div>
+                        </MotionDiv>
                     </div>
                 </section>
             </Container>
-            <motion.div
+            <MotionDiv
                 initial={{ opacity: 0, scale: 1 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}>
                 <PartnertshipCarousel />
-            </motion.div>
+            </MotionDiv>
         </div>
     );
 };
