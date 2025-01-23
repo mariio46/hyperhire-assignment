@@ -2,8 +2,9 @@ import Link from 'next/link';
 
 import { Container } from '@/components/container';
 import { HeroCardCarousel } from '@/components/hero-card-carousel';
+import { MobileNavbar } from '@/components/mobile-navbar';
 import { MotionDiv } from '@/components/motion';
-import { MobileNavbar, Navbar } from '@/components/navbar';
+import { Navbar } from '@/components/navbar';
 import { OfferBlock, OfferBlockDescription, OfferBlockTitle } from '@/components/offer-block';
 import { PartnertshipCarousel } from '@/components/partnertship-carousel';
 import { SpeechBubble } from '@/components/speech-bubble';
