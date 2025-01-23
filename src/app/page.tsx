@@ -4,7 +4,7 @@ import { FooterCard } from '@/components/footer-card';
 import { HeroCard } from '@/components/hero-card';
 import { HyperhireRGBLogo } from '@/components/hyperhire-logo';
 import { MobileNavbar, Navbar } from '@/components/navbar';
-import { SpeechBubbleLeftArrow, SpeechBubbleMiddleArrow } from '@/components/speech-bubble';
+import { SpeechBubble } from '@/components/speech-bubble';
 import { TablerIcon } from '@/components/tabler-icon';
 
 export default function Home() {
@@ -17,9 +17,9 @@ export default function Home() {
                     <section id="hero" className="grid gap-9 px-2.5 lg:grid-cols-2 lg:gap-4">
                         <div id="hero-left-side" className="space-y-16">
                             <div className="space-y-4">
-                                <SpeechBubbleLeftArrow>
+                                <SpeechBubble variant="default" arrowPosition="left">
                                     <span>풀타임, 파트타임</span>
-                                </SpeechBubbleLeftArrow>
+                                </SpeechBubble>
                                 <h1 className="text-4xl/[46.8px] font-black tracking-normal text-zinc-100 lg:text-5xl/[62.4px]">
                                     최고의 실력을 가진 <span className="block">외국인 인재를 찾고 계신가요?</span>
                                 </h1>
@@ -50,12 +50,12 @@ export default function Home() {
                             </div>
                         </div>
                         <div id="hero-right-side" className="flex flex-col items-center space-y-4">
-                            <SpeechBubbleMiddleArrow>
+                            <SpeechBubble variant="primary" arrowPosition="middle">
                                 <div className="me-1 flex size-7 items-center justify-center rounded-full bg-[#BBF3D2]">
                                     <TablerIcon name="IconCurrencyDollar" className="stroke-[#00C696] stroke-2" />
                                 </div>
                                 <span>월 100만원</span>
-                            </SpeechBubbleMiddleArrow>
+                            </SpeechBubble>
                             <div className="">
                                 <HeroCard />
                             </div>
