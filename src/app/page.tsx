@@ -1,9 +1,16 @@
 import { partnerships } from '@/lib/partnership';
 
+import {
+    FooterAdditionalCard,
+    FooterAdditionalCardDescription,
+    FooterAdditionalCardSubTitle,
+    FooterAdditionalCardTitle,
+} from '@/components/footer-additional-card';
 import { FooterCard } from '@/components/footer-card';
 import { HeroCard } from '@/components/hero-card';
 import { HyperhireRGBLogo } from '@/components/hyperhire-logo';
 import { MobileNavbar, Navbar } from '@/components/navbar';
+import { OfferBlock, OfferBlockDescription, OfferBlockTitle } from '@/components/offer-block';
 import { SpeechBubble } from '@/components/speech-bubble';
 import { TablerIcon } from '@/components/tabler-icon';
 
@@ -29,24 +36,24 @@ export default function Home() {
                                 </p>
                             </div>
                             <div className="hidden lg:grid lg:grid-cols-3 lg:gap-12">
-                                <div className="border-t border-t-white p-2">
-                                    <h3 className="text-lg font-black text-white">평균 월 120만원</h3>
-                                    <p className="text-base font-black text-white/80">
+                                <OfferBlock>
+                                    <OfferBlockTitle>평균 월 120만원</OfferBlockTitle>
+                                    <OfferBlockDescription>
                                         임금을 해당 국가를 기준으로 계산합니다.
-                                    </p>
-                                </div>
-                                <div className="border-t border-t-white p-2">
-                                    <h3 className="text-lg font-black text-white">최대 3회 인력교체</h3>
-                                    <p className="text-base font-black text-white/80">
+                                    </OfferBlockDescription>
+                                </OfferBlock>
+                                <OfferBlock>
+                                    <OfferBlockTitle>최대 3회 인력교체</OfferBlockTitle>
+                                    <OfferBlockDescription>
                                         막상 채용해보니 맞지 않아도 걱정하지 마세요.
-                                    </p>
-                                </div>
-                                <div className="border-t border-t-white p-2">
-                                    <h3 className="text-lg font-black text-white">평균 3일, 최대 10일</h3>
-                                    <p className="text-base font-black text-white/80">
+                                    </OfferBlockDescription>
+                                </OfferBlock>
+                                <OfferBlock>
+                                    <OfferBlockTitle>평균 3일, 최대 10일</OfferBlockTitle>
+                                    <OfferBlockDescription>
                                         급하게 사람이 필요한 경우에도 빠른 채용이 가능합니다.
-                                    </p>
-                                </div>
+                                    </OfferBlockDescription>
+                                </OfferBlock>
                             </div>
                         </div>
                         <div id="hero-right-side" className="flex flex-col items-center space-y-4">
@@ -56,7 +63,7 @@ export default function Home() {
                                 </div>
                                 <span>월 100만원</span>
                             </SpeechBubble>
-                            <div className="">
+                            <div>
                                 <HeroCard />
                             </div>
                         </div>
@@ -86,8 +93,8 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div className="space-y-2">
-                                <p className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">010-0000-0000</p>
-                                <p className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">aaaaa@naver.com</p>
+                                <FooterAdditionalCardDescription>010-0000-0000</FooterAdditionalCardDescription>
+                                <FooterAdditionalCardDescription>aaaaa@naver.com</FooterAdditionalCardDescription>
                             </div>
                         </div>
                         <div className="col-span-2">
@@ -100,42 +107,40 @@ export default function Home() {
                         </div>
                     </section>
                     <section id="footer-additional-content" className="flex flex-wrap items-center gap-4">
-                        <div className="space-y-3">
-                            <h3 className="text-xs/[1.125rem] font-black text-[#343741]">상호명</h3>
+                        <FooterAdditionalCard>
+                            <FooterAdditionalCardSubTitle>상호명</FooterAdditionalCardSubTitle>
                             <div className="space-y-1.5">
-                                <h2 className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">하이퍼하이어</h2>
-                                <span className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">
+                                <FooterAdditionalCardTitle>하이퍼하이어</FooterAdditionalCardTitle>
+                                <FooterAdditionalCardDescription>
                                     Hyperhire India Private Limited
-                                </span>
+                                </FooterAdditionalCardDescription>
                             </div>
-                        </div>
-                        <div className="space-y-3">
-                            <h3 className="text-xs/[1.125rem] font-black text-[#343741]">대표 CEO</h3>
+                        </FooterAdditionalCard>
+                        <FooterAdditionalCard>
+                            <FooterAdditionalCardSubTitle>대표 CEO</FooterAdditionalCardSubTitle>
                             <div className="space-y-1.5">
-                                <h2 className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">김주현</h2>
-                                <span className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">Juhyun Kim</span>
+                                <FooterAdditionalCardTitle>김주현</FooterAdditionalCardTitle>
+                                <FooterAdditionalCardDescription>Juhyun Kim</FooterAdditionalCardDescription>
                             </div>
-                        </div>
-                        <div className="space-y-3">
-                            <h3 className="text-xs/[1.125rem] font-black text-[#343741]">사업자등록번호 CIN</h3>
+                        </FooterAdditionalCard>
+                        <FooterAdditionalCard>
+                            <FooterAdditionalCardSubTitle>사업자등록번호 CIN</FooterAdditionalCardSubTitle>
                             <div className="space-y-1.5">
-                                <h2 className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">427-86-01187</h2>
-                                <span className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">
-                                    U74110DL2016PTC290812
-                                </span>
+                                <FooterAdditionalCardTitle>427-86-01187</FooterAdditionalCardTitle>
+                                <FooterAdditionalCardDescription>U74110DL2016PTC290812</FooterAdditionalCardDescription>
                             </div>
-                        </div>
-                        <div className="space-y-3">
-                            <h3 className="text-xs/[1.125rem] font-black text-[#343741]">주소 ADDRESS</h3>
+                        </FooterAdditionalCard>
+                        <FooterAdditionalCard>
+                            <FooterAdditionalCardSubTitle>주소 ADDRESS</FooterAdditionalCardSubTitle>
                             <div className="space-y-1.5">
-                                <h2 className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">
+                                <FooterAdditionalCardTitle>
                                     서울특별시 강남대로 479, 지하 1층 238호
-                                </h2>
-                                <span className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">
+                                </FooterAdditionalCardTitle>
+                                <FooterAdditionalCardDescription>
                                     D-138, Street number 11, Jagjeet Nagar, North East Delhi, New Delhi, 110053 India
-                                </span>
+                                </FooterAdditionalCardDescription>
                             </div>
-                        </div>
+                        </FooterAdditionalCard>
                     </section>
                     <section id="footer-watermark" className="flex flex-wrap items-center gap-4">
                         <p className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">&copy; 2023 Hyperhire</p>
