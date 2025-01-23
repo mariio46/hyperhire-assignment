@@ -1,15 +1,16 @@
+import { partnerships } from '@/lib/partnership';
+
 import { FooterCard } from '@/components/footer-card';
 import { HeroCard } from '@/components/hero-card';
 import { HyperhireRGBLogo } from '@/components/hyperhire-logo';
 import { MobileNavbar, Navbar } from '@/components/navbar';
 import { SpeechBubbleLeftArrow, SpeechBubbleMiddleArrow } from '@/components/speech-bubble';
 import { TablerIcon } from '@/components/tabler-icon';
-import { partnerships } from '@/lib/partnership';
 
 export default function Home() {
     return (
         <main>
-            <header className="bg-gradient-to-br from-[#26C2B9] to-[#288BE7] pb-28">
+            <div className="bg-gradient-to-br from-[#26C2B9] to-[#288BE7] pb-28">
                 <div className="mx-auto max-w-7xl">
                     <MobileNavbar />
                     <Navbar />
@@ -50,10 +51,6 @@ export default function Home() {
                         </div>
                         <div id="hero-right-side" className="flex flex-col items-center space-y-4">
                             <SpeechBubbleMiddleArrow>
-                                {/* <TablerIcon
-                                    name="IconCoinFilled"
-                                    className="me-1 size-7 fill-[#BBF3D2] stroke-[#00C696]"
-                                /> */}
                                 <div className="me-1 flex size-7 items-center justify-center rounded-full bg-[#BBF3D2]">
                                     <TablerIcon name="IconCurrencyDollar" className="stroke-[#00C696] stroke-2" />
                                 </div>
@@ -77,7 +74,7 @@ export default function Home() {
                         </div>
                     ))}
                 </section>
-            </header>
+            </div>
             <footer className="bg-[#FBFBFB] px-2.5 py-20">
                 <div className="mx-auto max-w-7xl space-y-16">
                     <section id="footer-content" className="grid gap-4 lg:grid-cols-3">
