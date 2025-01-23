@@ -10,7 +10,7 @@ import { HyperhireRGBLogo } from '@/components/hyperhire-logo';
 
 const SectionFooter = () => {
     return (
-        <footer className="bg-[#FBFBFB] px-2.5 py-20">
+        <footer className="px-2.5 py-20">
             <Container className="space-y-16">
                 <section id="footer-content" className="grid gap-4 lg:grid-cols-3">
                     <div className="col-span-1 space-y-5">
