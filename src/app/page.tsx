@@ -1,5 +1,6 @@
 import { partnerships } from '@/lib/partnership';
 
+import { Container } from '@/components/container';
 import {
     FooterAdditionalCard,
     FooterAdditionalCardDescription,
@@ -18,7 +19,7 @@ export default function Home() {
     return (
         <main>
             <div className="bg-gradient-to-br from-[#26C2B9] to-[#288BE7] pb-28">
-                <div className="mx-auto max-w-7xl">
+                <Container>
                     <MobileNavbar />
                     <Navbar />
                     <section id="hero" className="grid gap-9 px-2.5 lg:grid-cols-2 lg:gap-4">
@@ -68,7 +69,7 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                </div>
+                </Container>
                 <section id="partnership" className="mt-9 hidden items-center gap-[0.625rem] overflow-hidden lg:flex">
                     {partnerships.map((item) => (
                         <div
@@ -83,7 +84,7 @@ export default function Home() {
                 </section>
             </div>
             <footer className="bg-[#FBFBFB] px-2.5 py-20">
-                <div className="mx-auto max-w-7xl space-y-16">
+                <Container>
                     <section id="footer-content" className="grid gap-4 lg:grid-cols-3">
                         <div className="col-span-1 space-y-5">
                             <div className="space-y-4">
@@ -145,7 +146,7 @@ export default function Home() {
                     <section id="footer-watermark" className="flex flex-wrap items-center gap-4">
                         <p className="text-[0.813rem]/[1.219rem] font-black text-[#5E626F]">&copy; 2023 Hyperhire</p>
                     </section>
-                </div>
+                </Container>
             </footer>
         </main>
     );
