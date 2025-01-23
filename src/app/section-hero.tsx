@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { Container } from '@/components/container';
-import { HeroCard } from '@/components/hero-card';
+import { HeroCardCarousel } from '@/components/hero-card-carousel';
 import { MotionDiv } from '@/components/motion';
 import { MobileNavbar, Navbar } from '@/components/navbar';
 import { OfferBlock, OfferBlockDescription, OfferBlockTitle } from '@/components/offer-block';
@@ -96,11 +96,12 @@ const SectionHero = () => {
                             </SpeechBubble>
                         </MotionDiv>
                         <MotionDiv
+                            className="grid"
                             initial={{ opacity: 0, scale: 1 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}>
-                            <HeroCard />
+                            <HeroCardCarousel />
                         </MotionDiv>
                     </div>
                 </section>
