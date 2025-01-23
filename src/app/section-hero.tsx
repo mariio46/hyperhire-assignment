@@ -58,16 +58,6 @@ const SectionHero = () => {
                     </div>
                 </section>
             </Container>
-            {/* <section id="partnership" className="mt-9 hidden items-center gap-[0.625rem] overflow-hidden lg:flex">
-                {partnerships.map((item) => (
-                    <div key={item.name} className="flex w-80 min-w-80 items-center gap-6 rounded-xl bg-white/20 p-4">
-                        <div className="flex size-14 items-center justify-center rounded-lg bg-white/40">
-                            <TablerIcon name="IconBrandGithub" className="size-8 stroke-white stroke-2" />
-                        </div>
-                        <h5 className="text-2xl font-black text-white">{item.name}</h5>
-                    </div>
-                ))}
-            </section> */}
             <PartnertshipCarousel />
         </div>
     );
