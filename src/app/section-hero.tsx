@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Container } from '@/components/container';
 import { HeroCard } from '@/components/hero-card';
 import { MotionDiv } from '@/components/motion';
@@ -13,7 +15,7 @@ const SectionHero = () => {
             <Container>
                 <MobileNavbar />
                 <Navbar />
-                <section id="hero" className="grid gap-9 px-2.5 lg:grid-cols-2 lg:gap-4">
+                <section id="hero" className="grid gap-9 px-2.5 lg:grid-cols-2 lg:gap-1">
                     <div id="hero-left-side" className="space-y-16">
                         <div className="space-y-4">
                             <MotionDiv
@@ -42,8 +44,18 @@ const SectionHero = () => {
                                     <span className="lg:block">1주일 이내에 원격으로 채용해보세요.</span>
                                 </p>
                             </MotionDiv>
+                            <MotionDiv
+                                className="hidden lg:block"
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, ease: 'easeOut' }}>
+                                <Link href="#" className="text-lg/[27px] font-bold tracking-tight text-white underline">
+                                    개발자가 필요하신가요?
+                                </Link>
+                            </MotionDiv>
                         </div>
                         <MotionDiv
+                            className="hidden lg:block"
                             initial={{ opacity: 0, scale: 1 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
@@ -94,11 +106,54 @@ const SectionHero = () => {
                 </section>
             </Container>
             <MotionDiv
+                className="hidden lg:block"
                 initial={{ opacity: 0, scale: 1 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}>
                 <PartnertshipCarousel />
+            </MotionDiv>
+            <MotionDiv
+                className="lg:hidden"
+                initial={{ opacity: 0, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}>
+                <div id="mobile-offers" className="space-y-4 px-2.5 lg:hidden">
+                    <div className="mt-6 grid w-[16.875rem] gap-2">
+                        <div className="grid grid-cols-2">
+                            <div className="flex items-center gap-3">
+                                <div className="flex size-5 items-center justify-center rounded-md bg-[#E8ECFF]">
+                                    <TablerIcon name="IconCheck" className="size-4 stroke-[#2C599B] stroke-2" />
+                                </div>
+                                <span className="text-base font-black text-white">한국어 능력</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="flex size-5 items-center justify-center rounded-md bg-[#E8ECFF]">
+                                    <TablerIcon name="IconCheck" className="size-4 stroke-[#2C599B] stroke-2" />
+                                </div>
+                                <span className="text-base font-black text-white">업무 수행 능력</span>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-2">
+                            <div className="flex items-center gap-3">
+                                <div className="flex size-5 items-center justify-center rounded-md bg-[#E8ECFF]">
+                                    <TablerIcon name="IconCheck" className="size-4 stroke-[#2C599B] stroke-2" />
+                                </div>
+                                <span className="text-base font-black text-white">겸업 여부</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="flex size-5 items-center justify-center rounded-md bg-[#E8ECFF]">
+                                    <TablerIcon name="IconCheck" className="size-4 stroke-[#2C599B] stroke-2" />
+                                </div>
+                                <span className="text-base font-black text-white">평판 조회</span>
+                            </div>
+                        </div>
+                    </div>
+                    <Link href="#" className="block text-base font-black text-[#FBFF23] underline">
+                        개발자가 필요하신가요?
+                    </Link>
+                </div>
             </MotionDiv>
         </div>
     );
