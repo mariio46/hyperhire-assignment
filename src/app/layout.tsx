@@ -42,19 +42,19 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Hyperhire - Your trusted staffing & development partner',
     description: 'Best IT recruitment & software development firm in South Korea and India.',
-    // siteName: 'Marionotes',
+    siteName: 'Hyperhire.in',
     locale: 'id_ID',
     type: 'website',
     countryName: 'Indonesia',
-    // url: new URL('https://marionotes.com'),
-    // images: [
-    //     {
-    //         url: 'https://marionotes.com/opengraph-image.png',
-    //         width: 800,
-    //         height: 600,
-    //         alt: 'https://marionotes.com/opengraph-image.alt.txt',
-    //     },
-    // ],
+    url: new URL('https://hyperhire-show.vercel.app/'),
+    images: [
+      {
+        url: 'https://hyperhire-show.vercel.app/opengraph-image.png',
+        width: 800,
+        height: 600,
+        alt: 'https://hyperhire-show.vercel.app/opengraph-image.alt.txt',
+      },
+    ],
   },
   authors: {
     name: 'Mario',
