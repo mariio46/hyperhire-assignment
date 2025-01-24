@@ -5,7 +5,7 @@ import heroImage1 from '../../public/images/hero-image-1.png';
 
 const HeroCard = ({ className }: { className?: string }) => {
     return (
-        <div className={cn('flex w-80 flex-col justify-center space-y-9 rounded-xl bg-white p-9', className)}>
+        <div className={cn('flex max-w-80 flex-col justify-center space-y-9 rounded-xl bg-white p-9', className)}>
             <div className="flex flex-col items-center space-y-4">
                 <Image src={heroImage1} alt="Hero Profile Picture" className="size-[7.5rem]" />
                 <div className="text-center">
