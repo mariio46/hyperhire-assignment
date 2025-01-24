@@ -34,6 +34,32 @@ export const metadata: Metadata = {
         '단기프로젝트',
         'hyperhire',
     ],
+    category: 'Company Profile Website',
+    creator: 'Mario',
+    generator: 'Next.js',
+    publisher: 'Vercel',
+    applicationName: 'Company Profile Website',
+    openGraph: {
+        title: 'Hyperhire - Your trusted staffing & development partner',
+        description: 'Best IT recruitment & software development firm in South Korea and India.',
+        // siteName: 'Marionotes',
+        locale: 'id_ID',
+        type: 'website',
+        countryName: 'Indonesia',
+        // url: new URL('https://marionotes.com'),
+        // images: [
+        //     {
+        //         url: 'https://marionotes.com/opengraph-image.png',
+        //         width: 800,
+        //         height: 600,
+        //         alt: 'https://marionotes.com/opengraph-image.alt.txt',
+        //     },
+        // ],
+    },
+    authors: {
+        name: 'Mario',
+        url: new URL('https://marionotes.com'),
+    },
 };
 
 export default function RootLayout({
